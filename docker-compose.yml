@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/trackAndTap
+    environment: 
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=postgres
+  
+  next:
+    image: node:latest
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    working_dir: /app
+    command: bash -c 'npm install && npm run dev'
+    environment:
+    - DATABASE_URL=postgres://postgres:password@postgres:5432/postgres
+    restart: on-failure
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:

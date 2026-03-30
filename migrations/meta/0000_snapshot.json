@@ -1,0 +1,121 @@
+{
+  "id": "c87d0330-f896-47ca-9aa3-977d813be6db",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.games": {
+      "name": "games",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "identity": {
+            "type": "always",
+            "name": "games_id_seq",
+            "schema": "public",
+            "increment": "1",
+            "startWith": "1",
+            "minValue": "1",
+            "maxValue": "2147483647",
+            "cache": "1",
+            "cycle": false
+          }
+        },
+        "player_one_id": {
+          "name": "player_one_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_one_life": {
+          "name": "player_one_life",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_two_id": {
+          "name": "player_two_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_two_life": {
+          "name": "player_two_life",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_three_id": {
+          "name": "player_three_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_three_life": {
+          "name": "player_three_life",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_four_id": {
+          "name": "player_four_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_four_life": {
+          "name": "player_four_life",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_five_id": {
+          "name": "player_five_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_Five_life": {
+          "name": "player_Five_life",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_six_id": {
+          "name": "player_six_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "player_Six_life": {
+          "name": "player_Six_life",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
