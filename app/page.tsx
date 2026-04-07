@@ -1,9 +1,11 @@
-import Image from "next/image";
-import {LifeTotal} from './components/playerLife.tsx';
+import {LifeTotal} from './components/playerLife';
 
 export default function Home() {
   return (
-    <div className='flex flex-1 flex-col'>
+    <div className='grid grid-cols-2 h-full'>
+      <LifeTotal/>
+      <LifeTotal/>
+      <LifeTotal/>
       <LifeTotal/>
     </div>
   );

@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className='flex flex-col h-full'>
+    <html lang="en" className="flex flex-col h-dvh">
+      <body className='flex flex-col h-full grow'>
         {children}
       </body>
     </html>
