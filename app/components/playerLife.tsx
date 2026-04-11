@@ -18,10 +18,10 @@ export const LifeTotal = () => {
  
   
   return (
-    <div className='flex flex-row flex-1 grow items-center justify-center bg-black border border-black'>
-      <button className='flex flex-1 grow items-center justify-center' onClick={loseLife}>-</button>
-      <div className='flex flex-1 grow items-center justify-center'>{life}</div>
-      <button className='flex flex-1 grow items-center justify-center' onClick={gainLife}>+</button>
+    <div className='flex flex-row flex-1 grow items-center justify-center bg-black border border-white'>
+      <button className='flex flex-1 grow items-center justify-center text-white text-6xl' onClick={loseLife}>-</button>
+      <div className='flex flex-1 grow items-center justify-center text-white text-6xl'>{life}</div>
+      <button className='flex flex-1 grow items-center justify-center text-white text-6xl' onClick={gainLife}>+</button>
     </div>
   )
-};
+};  
