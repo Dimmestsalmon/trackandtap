@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct trackAndTapApp: App {
+struct TrackAndTapApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainMenu()
         }
     }
 }
