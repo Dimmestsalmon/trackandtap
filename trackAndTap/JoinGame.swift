@@ -10,11 +10,15 @@ import SwiftUI
 
 struct JoinGame: View {
     @ObservedObject var gameSession: MultipeerConnector
-    
+
     var body: some View {
         VStack {
-            Text("Available Games").font(.title)
-            
+            Text("Available Games")
+                .font(.title)
+
+            Text(gameSession.connectionStatus)
+                .foregroundStyle(.secondary)
+
             ForEach(gameSession.foundPeers, id: \.self) { peer in
                 Button(peer.displayName) {
                     gameSession.gameGuest.invitePeer(
@@ -24,11 +28,16 @@ struct JoinGame: View {
                         timeout: 30
                     )
                 }
+                .disabled(!gameSession.connectedPeers.isEmpty)
+            }
+            if !gameSession.connectedPeers.isEmpty {
+                Text("Connected. Waiting for the host to start the game…")
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+                    .padding(.top)
             }
         }
         .onAppear { gameSession.startBrowsing() }
         .onDisappear { gameSession.stopBrowsing() }
     }
 }
-
-
